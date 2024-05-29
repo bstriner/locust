@@ -80,10 +80,10 @@ def create_environment(
     )
 
 
-def main():
+def main(args=None):
     # find specified locustfile(s) and make sure it exists, using a very simplified
     # command line parser that is only used to parse the -f option.
-    locustfiles = parse_locustfile_option()
+    locustfiles = parse_locustfile_option(args=args)
     locustfiles_length = len(locustfiles)
 
     # Grabbing the Locustfile if only one was provided. Otherwise, allowing users to select the locustfile in the UI
